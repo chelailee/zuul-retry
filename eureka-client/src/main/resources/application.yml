@@ -1,0 +1,24 @@
+---
+spring:
+  profiles: 1
+  application:
+    name: admin-cloud-client
+
+server:
+  port: 4002
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:7001/eureka/,http://localhost:7002/eureka/
+---
+spring:
+  profiles: 2
+  application:
+    name: admin-cloud-client
+
+server:
+  port: 4003
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:7001/eureka/,http://localhost:7002/eureka/
